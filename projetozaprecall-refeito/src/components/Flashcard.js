@@ -1,9 +1,13 @@
 import styled from "styled-components"
 import seta_play from "../assets/seta_play.png"
-export default function Flashcard(){
+// Vai receber por prop o index que aí vai o número da pergunta e card quesão as perguntas e respostas
+export default function Flashcard({index,}){
     return(
         <QuestionContainer>
-        <p>Pergunta</p>
+        {/* Colocando o index aí depois de perfunta o número da pergunta que tá na array vai aparecer na frente do pergunta */}
+        {/* Adicionou o + 1 para que o índice não comece com o valor 0 */}
+        <p>Pergunta {index + 1}</p>
+        {/* Traz o ícone da seta */}
         <img src= {seta_play} alt="Icone de play" />
         </QuestionContainer>
     )

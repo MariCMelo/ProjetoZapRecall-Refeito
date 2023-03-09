@@ -1,9 +1,10 @@
 import styled from "styled-components"
 
-export default function Results(){
-    return(
+// recebe a prop totalQestions que é o tamanho da array de questões, em valor numérico
+export default function Results({totalQuestions, questionsCounter}){
+    return (
         <ResultsContainer>
-        Concluidos 0/10
+           {questionsCounter} / {totalQuestions} CONCLUÍDOS
         </ResultsContainer>
     )
 }
